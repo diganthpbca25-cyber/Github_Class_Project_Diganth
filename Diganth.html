@@ -1,0 +1,396 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Namma Events</title>
+
+<style>
+:root{
+  --bg1:#ffefd5;
+  --bg2:#ffe4e1;
+  --accent:#ff6f61;
+  --accent2:#ffb703;
+  --muted:#4b5563;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,Arial,sans-serif;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:#111;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 28px;
+}
+
+.brand{display:flex;align-items:center;gap:14px}
+
+.logo img{
+  width:56px;
+  height:56px;
+  border-radius:12px;
+  border:3px solid #fcfbfc;
+}
+
+h1{
+  font-size:20px;
+  margin:0;
+  color:#ffd000;
+}
+
+nav{display:flex;gap:12px}
+
+nav a{
+  padding:8px 12px;
+  border-radius:10px;
+  text-decoration:none;
+  color:inherit;
+  font-weight:600;
+}
+
+nav a.cta{
+  background:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.container{
+  max-width:1100px;
+  margin:24px auto;
+  padding:0 18px;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:20px;
+  align-items:center;
+}
+
+.hero-card{
+  padding:28px;
+  background:rgba(255,255,255,0.95);
+  border-radius:16px;
+  box-shadow:0 8px 30px rgba(12,18,32,0.08);
+}
+
+.hero h2{
+  font-size:28px;margin:0 0 8px;
+}
+
+.search{
+  display:flex;
+  gap:10px;
+}
+
+.search input,.search select{
+  flex:1;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid rgba(10,10,10,0.06);
+}
+
+.search button{
+  background:linear-gradient(90deg,var(--accent2),var(--accent));
+  color:#fff;
+  border:0;
+  padding:12px 14px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.photo{
+  border-radius:12px;
+  height:320px;
+  background:url('https://content.jdmagicbox.com/v2/comp/mumbai/w7/022pxx22.xx22.160127200020.x6w7/catalogue/bookeventz-andheri-east-mumbai-event-organisers-for-corporate-z1g0g200qk.jpg') center/cover;
+  border:6px solid rgba(255,255,255,0.5);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:20px;
+}
+
+.card{
+  background:white;
+  border-radius:12px;
+  padding:12px;
+  box-shadow:0 6px 16px rgba(10,10,10,0.06);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.card .img{
+  height:120px;
+  border-radius:10px;
+  background-size:cover;
+  background-position:center;
+}
+
+.card h3{
+  margin:0;font-size:16px;
+}
+
+.price{
+  color:var(--accent);
+  font-weight:700;
+}
+
+.btn-row{
+  display:flex;
+  gap:8px;
+  margin-top:auto;
+}
+
+.btn{
+  flex:1;
+  padding:8px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+}
+
+.btn.primary{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#fff;
+}
+
+.btn.ghost{
+  background:transparent;
+  border:1px solid rgba(0,0,0,0.06);
+}
+
+.booking-box{
+  padding:14px;
+  background:white;
+  border-radius:12px;
+  box-shadow:0 12px 30px rgba(12,18,32,0.06);
+  margin-top:20px;
+}
+
+label{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+  margin-top:8px;
+}
+
+input,select{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid rgba(0,0,0,0.06);
+  margin-top:6px;
+}
+
+.confirm{
+  margin-top:12px;
+  background:linear-gradient(90deg,var(--accent2),var(--accent));
+  color:#fff;
+  padding:12px;
+  border-radius:10px;
+  border:0;
+  width:100%;
+  cursor:pointer;
+}
+
+footer{
+  margin-top:30px;
+  padding:30px 18px;
+  text-align:center;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYUJOLV-5P45yNjS6lE_cF3a47q6lyDPJ6bg&s">
+    </div>
+    <h1>Namma Events</h1>
+  </div>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a class="cta" href="#book">Book Now</a>
+  </nav>
+</header>
+
+<main class="container">
+
+<section class="hero">
+  <div class="hero-card">
+    <h2>Plan The Perfect Event</h2>
+
+    <div class="search">
+      <input id="q" placeholder="Search services: sound, lighting, catering">
+      <select id="loc">
+        <option>Choose city</option>
+        <option>Bangalore</option>
+        <option>Mysore</option>
+        <option>Mangalore</option>
+      </select>
+      <button id="searchBtn">Search</button>
+    </div>
+  </div>
+
+  <div class="photo"></div>
+</section>
+
+<section id="services">
+  <h2>Popular Services</h2>
+  <div class="grid" id="servicesGrid"></div>
+</section>
+
+<div class="booking-box" id="book">
+  <strong>Reserve Now</strong>
+
+  <label>Service</label>
+  <select id="selService"></select>
+
+  <label>Date</label>
+  <input type="date" id="date">
+
+  <label>Time</label>
+  <input type="time" id="time">
+
+  <label>Your Name</label>
+  <input id="name" placeholder="Full name">
+
+  <button class="confirm" id="confirm">Confirm Booking</button>
+</div>
+
+<section id="gallery" style="margin-top:30px">
+  <h2>Event Gallery</h2>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxpFroEOBxix33PWYltQe49_pKyKUj29of1Q&s, style="width:100%;height:120px;object-fit:cover;border-radius:10px">
+    <img src=https://4.imimg.com/data4/FT/HX/ANDROID-5460782/product.jpeg style="width:100%;height:120px;object-fit:cover;border-radius:10px">
+    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsIiyGXqKtZTNtx-mSYnrhCd6f3zrGyPggSQ&s  style="width:100%;height:120px;object-fit:cover;border-radius:10px">
+    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHacTkazqV7NZxCDnne3qM2LH7pnQM0etVhg&s  style="width:100%;height:120px;object-fit:cover;border-radius:10px">
+  </div>
+</section>
+
+</main>
+
+<footer>Namma Events</footer>
+
+<script>
+const SERVICES = [
+  {
+    id:1,
+    name:'Stage & Backdrop',
+    price:12000,
+    img:'https://images.unsplash.com/photo-1531058020387-3be344556be6'
+  },
+   
+   
+   {   id:2,
+    name:'Lighting & Effects',
+    price:3500,
+    img:'https://images.unsplash.com/photo-1492684223066-81342ee5ff30'
+  },
+  {
+    id:3,
+    name:'Catering (per person)',
+    price:400,
+    img:'https://images.unsplash.com/photo-1504674900247-0877df9cc836'
+  },
+    
+  {
+    id:4,
+    name:'Photography',
+    price:9000,
+    img:'https://images.unsplash.com/photo-1516035069371-29a1b244cc32'
+  }
+];
+
+const grid = document.getElementById('servicesGrid');
+const sel = document.getElementById('selService');
+
+function loadCards(list){
+  grid.innerHTML = "";
+  list.forEach(s=>{
+    const div = document.createElement('div');
+    div.className='card';
+
+    div.innerHTML = `
+      <div class="img" style="background-image:url('${s.img}')"></div>
+      <h3>${s.name}</h3>
+      <div class="price">₹${s.price}</div>
+      <div class="btn-row">
+        <button class="btn primary" data-id="${s.id}">Book</button>
+        <button class="btn ghost" data-id="${s.id}">Details</button>
+      </div>
+    `;
+
+    grid.appendChild(div);
+
+    const opt = document.createElement('option');
+    opt.value = s.id;
+    opt.textContent = s.name;
+    sel.appendChild(opt);
+  });
+}
+
+loadCards(SERVICES);
+
+document.addEventListener('click', e=>{
+  const b = e.target.closest('button');
+  if(!b) return;
+  const id = b.dataset.id && Number(b.dataset.id);
+
+  if(b.classList.contains('primary')){
+    sel.value = id;
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  if(b.classList.contains('ghost')){
+    const s = SERVICES.find(x=>x.id===id);
+    alert(`Service: ${s.name}\nPrice: ₹${s.price}`);
+  }
+});
+
+document.getElementById('confirm').addEventListener('click', ()=>{
+  const sId = Number(sel.value);
+  const name = document.getElementById('name').value.trim();
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+
+  if(!sId || !name || !date || !time)
+    return alert('Please fill all booking details.');
+
+  const s = SERVICES.find(x=>x.id===sId);
+
+  alert(`Booking Successful!
+${s.name}
+${date} at ${time}
+Name: ${name}`);
+
+  document.getElementById('name').value="";
+  document.getElementById('date').value="";
+  document.getElementById('time').value="";
+});
+
+document.getElementById('searchBtn').addEventListener('click', ()=>{
+  const q = document.getElementById('q').value.toLowerCase();
+  const filtered = SERVICES.filter(s=>s.name.toLowerCase().includes(q));
+  loadCards(filtered);
+});
+</script>
+
+</body>
+</html>
